@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>madd</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <h1>INVENTORY MANAGEMENT</h1>
+
+	
+<div class="bg-dark">
+      <div class="col-md-12"></div>
+      <hr>
+
+            <ul class="nav nav-tabs" >
+                <li class="nav-item">
+                  <a class="nav-link" href="pview">product</a></li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="lview">location</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="mview">transfer</a></li>
+            </ul> 
+          
+      </hr>
+</div>
+
+
+</ul>
+	<form action='/madd' method = "POST">
+		<div class="form-group">
+		<p>Movement ID<input type="text"  style="width:400px"  class="form-control" name="movement_id"></p>
+		<p>From<input type="text"  style="width:400px"  class="form-control" name="from_location1"></p>
+		<p>To<input type="text"  style="width:400px"  class="form-control" name="to_location"></p>
+		<p>Product<input type="text"  style="width:400px"  class="form-control" name="product_name"></p>
+		<p>Quantity<input type="text"  style="width:400px"  class="form-control" name="quantity"></p>
+		<p><input type="submit" class="btn btn-info" value="submit"></p>
+	</div>
+	</form>
+</body>
+</html>

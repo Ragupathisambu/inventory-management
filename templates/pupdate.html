@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>update</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<nav  class="navbar ">
+  <h1>INVENTORY MANAGEMENT</h1>
+</nav>
+	
+<div class="bg-dark">
+      <div class="col-md-12"></div>
+      <hr>
+
+            <ul class="nav nav-tabs" >
+                <li class="nav-item">
+                  <a class="nav-link" href="#home">overview</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pview">product</a></li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="lview">location</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="mview">transfer</a></li>
+            </ul> 
+          
+      </hr>
+</div>
+
+	<h1>Update</h1>
+	 	<form action="/pupdate" method="post">
+	 		<div class="form-group">
+	 		<labbel>product ID</labbel>
+	 		<input type="text"  style="width:400px"  class="form-control" name="product_id" value="{{result[0]}}">
+	 		<label>product Name</label>
+	 		<input type="text"  style="width:400px"  class="form-control" name="product_name" value="{{result[1]}}">
+	 		<label>warehouse</label>
+	 		<input type="text"  style="width:400px"  class="form-control" name="warehouse" value="{{result[2]}}">
+	 		<label>quantity</label>
+	 		<input type="text"  style="width:400px"  class="form-control" name="quantity" value="{{result[3]}}">
+	 		<input type="submit" class="btn btn-info" value="update Details">
+	 		</div>
+	 	</form>
+
+</body>
+</html>

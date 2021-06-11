@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+  <title>location</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<nav  class="navbar ">
+  <h1>INVENTORY MANAGEMENT</h1>
+</nav>
+	
+<div class="bg-dark">
+      <div class="col-md-12"></div>
+      <hr>
+
+            <ul class="nav nav-tabs" >
+               
+                <li class="nav-item">
+                  <a class="nav-link" href="pview">product</a></li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="lview">location</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="mview">transfer</a></li>
+            </ul> 
+          
+      </hr>
+</div>
+<div class="text-right">
+	<a href="/ladd" class="btn btn-info">Add</a>
+</div>
+		
+<div class="table-responsive">
+  <table class="table table-striped table-hover ">
+    <tr>
+
+      <th>Location Name</th>
+      <th>Discription</th>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for res in result %}
+    <tr>
+
+      <td>{{res[1]}}</td>
+       <td>{{res[2]}}</td>
+      <td><a href="{{'/lupdate?location_id=%s'%res[0]|urlencode}}" class="btn btn-info">Update</a></td>
+	  <td><a href="{{'/ldelete?location_id=%s'%res[0]|urlencode}}" class="btn btn-info">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+
+</div>
+
+</body>
+</html>
